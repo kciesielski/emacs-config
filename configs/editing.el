@@ -78,3 +78,60 @@
 
 
 (global-undo-tree-mode 1)
+
+(global-linum-mode t) ; http://superuser.com/questions/212193/how-do-i-display-line-numbers-in-emacs-not-in-the-mode-line
+
+;; Highlight the line number of the current line.
+(use-package hlinum
+  :config
+(hlinum-activate))
+
+;; buffer local variables
+(setq-default
+ indent-tabs-mode nil
+ tab-width 4
+ c-basic-offset 4)
+    (tool-bar-mode 0) 
+    (menu-bar-mode 0)
+    (scroll-bar-mode 0)
+    (fset `yes-or-no-p `y-or-n-p)
+    (global-set-key (kbd "M-]") 'next-buffer)
+    (global-set-key (kbd "M-[") 'previous-buffer)
+;; modes
+(electric-indent-mode 0)
+
+;; global keybindings
+(global-unset-key (kbd "C-z"))
+
+(setq
+ inhibit-startup-screen t
+ create-lockfiles nil
+ make-backup-files nil
+ column-number-mode t
+ scroll-error-top-bottom t
+ show-paren-delay 0.5
+ use-package-always-ensure t
+ sentence-end-double-space nil ; above mostly from ensime docs
+ ns-pop-up-frames nil ; http://superuser.com/questions/277755/emacs-opens-files-in-a-new-frame-when-opened-with-open-a/431601#431601?newreg=6d0dafa353314a5f88b9a04bb497d088
+ )
+
+(fset `yes-or-no-p `y-or-n-p)
+
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+;; from Prelude (https://github.com/bbatsov/prelude)
+
+;; revert buffers automatically when underlying files are changed externally
+(global-autom-revert-mode t)
+
+;; smart tab behavior - indent or complete
+(setq tab-always-indent 'complete)
+
+(unless (package-installed-p 'super-save)
+  (package-refresh-contents)
+  (package-install 'super-save))
+(super-save-mode +1)

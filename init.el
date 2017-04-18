@@ -8,9 +8,10 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; order matter
+;; order matters
 (load "~/.emacs.d/configs/install_first")
 (load "~/.emacs.d/configs/osx")
+(load "~/.emacs.d/configs/linux")
 (load "~/.emacs.d/configs/yasnippet")
 (load "~/.emacs.d/configs/misc")
 (load "~/.emacs.d/configs/ui")
@@ -19,6 +20,8 @@
 (load "~/.emacs.d/configs/git")
 (load "~/.emacs.d/configs/windows")
 (load "~/.emacs.d/configs/helm")
+(load "~/.emacs.d/configs/smart-modeline")
+(load "~/.emacs.d/configs/neotree")
 (load "~/.emacs.d/configs/erlang")
 (load "~/.emacs.d/configs/other")
 (load "~/.emacs.d/configs/org")

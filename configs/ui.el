@@ -1,4 +1,4 @@
-(packages-conditional-install '(zoom-frm neotree monokai-theme moe-theme))
+(packages-conditional-install '(zoom-frm monokai-theme moe-theme))
 
 (require 'moe-theme)
 (load-theme 'moe-dark t)
@@ -6,7 +6,6 @@
 (desktop-save-mode 1)
 (tool-bar-mode 0) 
 (menu-bar-mode 0)
-(toggle-frame-fullscreen) 
 (scroll-bar-mode 0)
 
 (fset `yes-or-no-p `y-or-n-p)
@@ -19,5 +18,9 @@
 (global-set-key (kbd "C-=") 'zoom-frm-in)
 (global-set-key (kbd "C--") 'zoom-frm-out)
 
-(global-set-key (kbd "M-o M-t t") 'neotree-toggle)
-(global-set-key (kbd "M-o M-t f") 'neotree-find)
+(toggle-frame-maximized)
+
+;; Don't defer screen updates when performing operations.
+(setq redisplay-dont-pause t)
+
+(set-default-font "-*-Hack-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")
