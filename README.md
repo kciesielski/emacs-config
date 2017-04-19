@@ -15,7 +15,10 @@ My Emacs configuration, the way I like it
  ln -s ~/my_emacs_d/my_snippets ~/.emacs.d/my_snippets
 ```
 
-Additional resources required:
+Additional resources required:  
+
 Silver searcher https://github.com/ggreer/the_silver_searcher
+
 all-the-icons special fonts for neotree: https://github.com/domtronn/all-the-icons.el/tree/master/fonts
+
 Hack font for editor https://github.com/chrissimpkins/Hack
