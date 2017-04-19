@@ -24,3 +24,6 @@
 (setq redisplay-dont-pause t)
 
 (set-default-font "-*-Hack-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")
+(when (eq system-type 'darwin)
+  (set-default-font "-*-Hack-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+)

@@ -6,6 +6,7 @@
 (when (eq system-type 'darwin) 
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super)
+  (setq insert-directory-program "/usr/local/bin/gls")
   )
 
 ;; use dedaulf mac notifier

@@ -1,4 +1,4 @@
-(packages-conditional-install '(smartparens projectile))
+(packages-conditional-install '(smartparens projectile linum-off expand-region iedit smooth-scroll))
 
 (show-paren-mode 1)
 (column-number-mode 1)
@@ -10,10 +10,8 @@
 (key-chord-define-global "q]" 'sp-forward-sexp)
 
 (global-linum-mode 1)
-; turn linum off in some buffers, e.g. term
-(use-package linum-off)
 
-(add-to-list 'linum-disabled-modes-list 'ansi-term)
+;;(add-to-list 'linum-disabled-modes-list 'ansi-term)
 
 (show-paren-mode 1)
 
@@ -26,9 +24,7 @@
 ;; fn+arrows jump to start/end of line, not start/end of buffer
 (define-key global-map [home] 'beginning-of-line)
 (define-key global-map [end] 'end-of-line)
-
-(use-package expand-region
-  :bind ("M-<up>" . er/expand-region))
+(global-set-key (kbd "M-<up>") 'er/expand-region)
   
 ;; modify C-k to kill whole line
 (setq kill-whole-line t)
@@ -39,9 +35,6 @@
 
 ;; overwrite when region selected: https://www.gnu.org/software/emacs/manual/html_node/efaq/Replacing-highlighted-text.html
 (delete-selection-mode 1)
-
-;; https://github.com/victorhge/iedit - simultaneously edit same word occurences
-(use-package iedit)
 
 ;; half-scroll https://www.emacswiki.org/emacs/HalfScrolling
 (defun window-half-height ()
@@ -83,7 +76,6 @@
 
 
 (require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
 (delete-selection-mode 1)
 (global-set-key (kbd "s-<right>") 'move-end-of-line)
 (global-set-key (kbd "s-<left>") 'move-beginning-of-line)
@@ -101,8 +93,6 @@
   (forward-line -1)
   (indent-according-to-mode))
 
-(use-package smooth-scroll
-  :config
-  (smooth-scroll-mode 1)
-  (setq smooth-scroll/vscroll-step-size 5)
-)
+;;(packages-conditional-install '(smooth-scroll))
+;;(smooth-scroll-mode t)
+;;(setq smooth-scroll/vscroll-step-size 5)

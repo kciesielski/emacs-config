@@ -1,4 +1,4 @@
-(packages-conditional-install '(goto-chg multiple-cursors avy undo-tree string-edit highlight-symbol))
+(packages-conditional-install '(goto-chg multiple-cursors avy undo-tree string-edit highlight-symbol hlinum))
 
 (key-chord-define-global "kw" 'kill-word)
 (key-chord-define-global "bw" 'backward-kill-word)
@@ -82,9 +82,7 @@
 (global-linum-mode t) ; http://superuser.com/questions/212193/how-do-i-display-line-numbers-in-emacs-not-in-the-mode-line
 
 ;; Highlight the line number of the current line.
-(use-package hlinum
-  :config
-(hlinum-activate))
+(hlinum-activate)
 
 ;; buffer local variables
 (setq-default
@@ -110,7 +108,6 @@
  column-number-mode t
  scroll-error-top-bottom t
  show-paren-delay 0.5
- use-package-always-ensure t
  sentence-end-double-space nil ; above mostly from ensime docs
  ns-pop-up-frames nil ; http://superuser.com/questions/277755/emacs-opens-files-in-a-new-frame-when-opened-with-open-a/431601#431601?newreg=6d0dafa353314a5f88b9a04bb497d088
  )
@@ -126,7 +123,7 @@
 ;; from Prelude (https://github.com/bbatsov/prelude)
 
 ;; revert buffers automatically when underlying files are changed externally
-(global-autom-revert-mode t)
+(global-auto-revert-mode t)
 
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
