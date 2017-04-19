@@ -1,5 +1,4 @@
-diff a/README.md b/README.md	(rejected hunks)
-@@ -4,17 +4,20 @@ My Emacs configuration, the way I like it
+My Emacs configuration, the way I like it
  
  Configuration compatible with Emacs version >= 24.4
  
