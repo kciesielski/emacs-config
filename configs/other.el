@@ -4,3 +4,4 @@
 (encourage-mode 1)
 (which-key-mode)
 
+(global-set-key [escape] 'keyboard-escape-quit)
