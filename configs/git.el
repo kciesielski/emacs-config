@@ -1,6 +1,7 @@
 (packages-conditional-install '(magit diff-hl))
 
 (global-set-key (kbd "C-x G") 'magit-status)
+(global-set-key (kbd "s-9") 'magit-status)
 ;; (git-gutter:update-interval 2)
 ;; (global-git-gutter-mode +1)
 
