@@ -24,7 +24,7 @@
 ;; fn+arrows jump to start/end of line, not start/end of buffer
 (define-key global-map [home] 'beginning-of-line)
 (define-key global-map [end] 'end-of-line)
-(global-set-key (kbd "M-<up>") 'er/expand-region)
+(global-set-key (kbd "M-<up>") #'er/expand-region)
   
 ;; modify C-k to kill whole line
 (setq kill-whole-line t)
@@ -93,6 +93,6 @@
   (forward-line -1)
   (indent-according-to-mode))
 
-;;(packages-conditional-install '(smooth-scroll))
-;;(smooth-scroll-mode t)
-;;(setq smooth-scroll/vscroll-step-size 5)
+(global-set-key (kbd "C-w") #'er/expand-region)
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-S-Z") 'undo-tree-redo)
