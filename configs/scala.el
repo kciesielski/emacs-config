@@ -64,3 +64,18 @@
   (insert "test"))
 
 
+(setq
+  ensime-sbt-command "/usr/bin/sbt"
+  sbt:program-name "/usr/bin/sbt")
+
+
+(defun kciesielski-scala/scalafmt-file ()
+   (when (eq major-mode 'scala-mode)
+  (interactive)  
+  (let ((str (concat "scalafmt -f " buffer-file-name " --config=" projectile-project-root "/home/kc/code/purebox/.scalafmt.conf -i --exclude ensime")))
+    (message str)
+    (shell-command-to-string str))
+  (message "scalafmt done"))
+)
+
+(add-hook 'after-save-hook 'kciesielski-scala/scalafmt-file)
