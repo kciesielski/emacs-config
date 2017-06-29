@@ -1,4 +1,8 @@
-(packages-conditional-install '(neotree all-the-icons))
+(packages-conditional-install '(neotree))
+
+;;(when (eq system-type 'gnu/linux)
+;;(packages-conditional-install '(all-the-icons))
+;;)
   ;; modified version of https://github.com/hemmvm/dotemacs/blob/master/site-lisp/util--neotree.el
   (defun neotree-project-tree-open ()
     (interactive)

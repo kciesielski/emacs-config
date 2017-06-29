@@ -33,7 +33,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (all-the-icons zoom-window zoom-frm which-key undo-tree super-save string-edit smooth-scroll smartparens smart-mode-line neotree multiple-cursors monokai-theme moe-theme markdown-mode magit linum-off keyfreq key-chord iedit hlinum highlight-symbol helm-projectile helm-ag goto-chg expand-region exec-path-from-shell erlang ensime eno encourage-mode elmacro diff-hl csv-mode auto-package-update annoying-arrows-mode ag ace-window))))
+    (zoom-window zoom-frm which-key undo-tree super-save string-edit smooth-scroll smartparens smart-mode-line neotree multiple-cursors monokai-theme moe-theme markdown-mode magit linum-off keyfreq key-chord iedit hlinum highlight-symbol helm-projectile helm-ag goto-chg expand-region exec-path-from-shell erlang ensime eno encourage-mode elmacro diff-hl csv-mode auto-package-update annoying-arrows-mode ag ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
