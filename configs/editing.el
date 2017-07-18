@@ -3,7 +3,6 @@
 (key-chord-define-global "kw" 'kill-word)
 (key-chord-define-global "bw" 'backward-kill-word)
 (key-chord-define-global "mw" 'mark-word)
-(key-chord-define-global "ms" 'mark-sexp)
 
 (require 'eno)
 (key-chord-define-global "wj" 'eno-word-goto)
@@ -42,7 +41,6 @@
   (comment-or-uncomment-region (line-beginning-position) (line-end-position))
   (next-line))
 (global-set-key (kbd "C-c /") 'toggle-comment-on-line)
-(key-chord-define-global "cl" 'toggle-comment-on-line)
 
 
 (defun copy-line (arg)
