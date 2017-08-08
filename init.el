@@ -27,6 +27,7 @@
 (load "~/.emacs.d/configs/greek")
 (load "~/.emacs.d/configs/solidity")
 (load "~/.emacs.d/configs/typescript")
+(load "~/.emacs.d/configs/prettier")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
